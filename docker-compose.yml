@@ -1,0 +1,23 @@
+version: "3"
+services:
+  mc:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    environment:
+      EULA: "TRUE"
+      TYPE: "CURSEFORGE"
+      CF_SERVER_MOD: "/modpack/server-1.1.0.zip"
+      MOTD: "A §l§cATM7§r Skyblock §nserver"
+      DIFFICULTY: "hard"
+      ICON: "https://miro.medium.com/max/1280/1*wqpzXj22dHuW4RFNmkkINg.png"
+      MAX_PLAYERS: "90"
+      ALLOW_FLIGHT: "TRUE"
+      MEMORY: "12G"
+      LEVEL_TYPE: "skyblockbuilder:skyblock"
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    volumes:
+      - ./minecraft-data:/data
+      - ./modpack:/modpack
