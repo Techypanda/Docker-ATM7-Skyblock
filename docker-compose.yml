@@ -7,17 +7,21 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "CURSEFORGE"
-      CF_SERVER_MOD: "/modpack/server-1.1.0.zip"
-      MOTD: "A §l§cATM7§r Skyblock §nserver"
+      CF_SERVER_MOD: "/modpack/Server-Files-0.1.10.zip"
+      MOTD: "wtf is matthew on about cunt"
       DIFFICULTY: "hard"
-      ICON: "https://miro.medium.com/max/1280/1*wqpzXj22dHuW4RFNmkkINg.png"
+      ICON: "https://scontent-syd2-1.xx.fbcdn.net/v/t1.6435-9/61130982_831958410535980_8070721261216464896_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_ohc=-ZE_O5nD6GwAX8ylzyb&tn=wljt9xd-Eeov0gW2&_nc_ht=scontent-syd2-1.xx&oh=00_AfDj_9IJdhfzQMstmvdsm4MhYIpRe4EQJkiEqWosKgwRdw&oe=638D750E"
       MAX_PLAYERS: "90"
+      OPS: "techytechster"
+      MAX_TICK_TIME: "-1"
       ALLOW_FLIGHT: "TRUE"
       MEMORY: "20G"
-      LEVEL_TYPE: "skyblockbuilder:skyblock"
+      LEVEL_TYPE: "biomesoplenty"
     tty: true
     stdin_open: true
     restart: unless-stopped
     volumes:
       - ./minecraft-data:/data
       - ./modpack:/modpack
+volumes:
+  data:
